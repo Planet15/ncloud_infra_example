@@ -1,0 +1,32 @@
+{
+  "variables": {
+    "ncloud_access_key": "",
+    "ncloud_secret_key": ""
+  },
+  "builders": [
+    {
+      "type": "ncloud",
+      "access_key": "{{user `ncloud_access_key`}}",
+      "secret_key": "{{user `ncloud_secret_key`}}",
+
+      "ssh_username" : "root",
+      "block_storage_size" : "10",
+      "server_image_product_code": "SPSW0LINUX000046",
+      "server_product_code": "SPSVRSTAND000003",
+      "server_image_name": "packertest",
+      "server_image_description": "server image description",
+      "region": "Korea"
+    }
+  ],
+
+	"Provisioners" : [
+	{
+		"type": "shell",
+		"inline": [
+		"yum install httpd -y",
+                "systemctl enable httpd",
+		"systemctl start httpd"
+		]
+	}
+	]
+}
