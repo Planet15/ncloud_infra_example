@@ -7,7 +7,7 @@ WORKDIR /install_tmp
 RUN yum -y update
 RUN curl -LO https://centos7.iuscommunity.org/ius-release.rpm 
 RUN yum install -y ius-release.rpm
-RUN yum install -y python36u python36u-devel python36u-libs python36u-pip java-1.8.0-openjdk-devel.x86_64 wget unzip
+RUN yum install -y python36u python36u-devel python36u-libs python36u-pip java-1.8.0-openjdk-devel.x86_64 wget unzip git
 RUN curl -LO https://bootstrap.pypa.io/get-pip.py
 
 # install kubectl
