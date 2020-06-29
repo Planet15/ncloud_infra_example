@@ -1,0 +1,30 @@
+#!/bin/sh
+
+#check epel-release package on this hosts
+result=`yum update-to epel-release`
+checkresult='*available*'
+
+#if checkresult value is true, then install the epel-release package
+if [[ "$result" == $checkresult ]]; then
+   yum install epel-release -y
+fi
+
+#check ansible package on this hosts
+result=`yum update-to ansible`
+
+#if checkresult value is true, then install the ansbile package
+if [[ "$result" == $checkresult ]]; then
+   yum install ansible -y
+fi
+
+# add awx pub key
+mkdir /root/.ssh
+cat << EOF >> /root/.ssh/authorized_keys
+pubkeyinsertline
+EOF
+
+#ncloud and awx 
+OUTPUT="$(curl -u 'awxuser:awxpasswd' -k -X POST http://tower.csong.kr/api/v2/tokens/ | python -c "import sys, json; print json.load(sys.stdin)['token']")"
+IPADDRESS="$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.*')"
+INVENTORYID="$(curl -X GET -H "Authorization: Bearer $OUTPUT" -H "Content-Type: application/json" -k http://tower.csong.kr/api/v2/inventories/?search='ncloud' | python -c "import sys, json; print json.load(sys.stdin)['results'][0]['id']")"
+curl -d '{"name":"'"$IPADDRESS"'","description":"auto input host from ncloud","variables":"{ansible_ssh_user : root}"}' -X POST -H "Authorization: Bearer $OUTPUT" -H "Content-Type: application/json" -k http://tower.csong.kr/api/v2/inventories/$INVENTORYID/hosts/
