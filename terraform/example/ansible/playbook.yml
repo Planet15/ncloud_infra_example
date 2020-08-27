@@ -1,0 +1,41 @@
+---
+- hosts: ncloud 
+  become: true
+  tasks:
+    - name: ping
+      ping:
+
+    - name: enable ngnix repo
+      copy:
+        src: nginx.repo
+        dest: /etc/yum.repos.d/nginx.repo
+        owner: root
+        group: root
+        mode: '0644'
+        backup: yes
+
+    - name: install packages
+      yum:
+        name: "{{ packages }}"
+        state: latest
+        update_cache: yes
+      vars:
+        packages:
+        - git
+        - nginx
+
+    - name: Make sure a service is running
+      systemd:
+        state: started
+        name: nginx
+        enabled: yes
+
+    - name: Download the nginx package for backup version but do not install it
+      yum:
+        name: "{{ packages }}"
+        state: latest
+        download_only: true
+      vars:
+        packages:
+        - git
+        - nginx
