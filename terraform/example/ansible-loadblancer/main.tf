@@ -2,6 +2,7 @@ provider "ncloud" {
   access_key = var.access_key
   secret_key = var.secret_key
   region     = var.region
+  site       = var.site
 }
 
 data "ncloud_root_password" "rootpwd" {
@@ -12,7 +13,7 @@ data "ncloud_root_password" "rootpwd" {
 
 data "ncloud_port_forwarding_rules" "rules" {
   count                    = "${var.instance_count}"
-  zone 			   = ncloud_server.server[count.index].zone 
+  zone		           = ncloud_server.server[count.index].zone 
 }
 
 resource "random_id" "id" {
@@ -33,6 +34,7 @@ resource "ncloud_server" "server" {
   login_key_name            = "${ncloud_login_key.key.key_name}"
   zone                      = "${var.zones[count.index]}" 
 }
+
 
 resource "ncloud_port_forwarding_rule" "forwarding" {
   count         		   = "${var.instance_count}"

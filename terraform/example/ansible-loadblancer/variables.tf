@@ -6,12 +6,12 @@ variable "secret_key" { # export TF_VAR_secret_key=...
   default = ""
 }
 
-variable "server_image_product_code" { # centos-7.3-64
-  default = "SPSW0LINUX000046"
+variable "server_image_product_code" { # centos-7.8-64
+  default = "SPSW0LINUX000139" #SPSW0LINUX000046
 }
 
-variable "server_product_code" { # vCPU 2EA, Memory 4GB, Disk 50GB
-  default = "SPSVRSSD00000003" #SPSVRSTAND000056
+variable "server_product_code" { # vCPU 2EA, Memory 4GB, Disk 50GB[SSD]
+  default = "SPSVRHICPUSSD001" #SPSVRSSD00000003
 }
 
 variable "login_key_name" {
@@ -23,11 +23,14 @@ variable "instance_count" {
 }
 
 variable "zones" {
-        type = "list"
-        default = ["KR-2", "KR-2"]
+        type = list
+        default = ["KR-1", "KR-2"]
 }
 
 variable "region" {
   default = "KR"
 }
 
+variable "site" {
+  default = "www.ncloud.com"
+}
