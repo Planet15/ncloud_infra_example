@@ -10,8 +10,8 @@ variable "server_image_product_code" { # centos-7.8-64
   default = "SPSW0LINUX000139" #SPSW0LINUX000046
 }
 
-variable "server_product_code" { # vCPU 2EA, Memory 4GB, Disk 50GB[SSD]
-  default = "SPSVRHICPUSSD001" #SPSVRSSD00000003
+variable "server_product_code" { # vCPU 2EA, Memory 8GB, Disk 50GB[SSD]
+  default = "SPSVRSTAND000072" #SPSVRSSD00000003
 }
 
 variable "login_key_name" {
