@@ -1,0 +1,90 @@
+---
+- hosts: ncloud 
+  become: true
+  tasks:
+    - name: ping
+      ping:
+
+    - name: enable ngnix repo
+      copy:
+        src: nginx.repo
+        dest: /etc/yum.repos.d/nginx.repo
+        owner: root
+        group: root
+        mode: '0644'
+        backup: yes
+
+    - name: mount nas volume
+      copy:
+        src: mount.sh
+        dest: /root/mount.sh
+        owner: root
+        group: root
+        mode: '0755'
+        backup: yes
+
+    - name: check mount.sh
+      stat:
+        path: /root/mount.sh
+      register: mount_nas
+
+    - name: install packages
+      yum:
+        name: "{{ packages }}"
+        state: latest
+        update_cache: yes
+      vars:
+        packages:
+        - nginx
+        - nfs-utils
+
+    - name: nginx service is stop
+      systemd:
+        state: stopped 
+        name: nginx
+      when:  mount_nas.stat.exists
+
+    - name: copy from nginx www path to temp directory
+      copy:
+        src: /usr/share/nginx/html
+        dest: /root/nginx/
+        remote_src: yes
+      when:  mount_nas.stat.exists
+
+    - name: new mount nas volume for www html
+      shell: sh +x /root/mount.sh
+      when:  mount_nas.stat.exists
+
+    - name: copy from temp directory to nas volume
+      copy:
+        src: /root/nginx/html/
+        dest: /usr/share/nginx/html
+        remote_src: yes
+      when:  mount_nas.stat.exists
+
+    - name: remove temp directory
+      file:
+        path: /root/nginx/html
+        state: absent
+      when:  mount_nas.stat.exists
+
+    - name: Make sure a service is running
+      systemd:
+        state: started
+        name: nginx
+        enabled: yes
+      when:  mount_nas.stat.exists
+
+    - name: Download the nginx package for backup version but do not install it
+      yum:
+        name: "{{ packages }}"
+        state: latest
+        download_only: true
+      vars:
+        packages:
+        - nginx
+
+    - name : cleanup config file
+      file:
+        path: /root/mount.sh
+        state: absent
