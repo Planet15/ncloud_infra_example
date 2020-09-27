@@ -1,0 +1,35 @@
+horturl APP!
+===================
+
+This APP to Shorten Long and Complicated URLs
+
+Web pages often contain links that are extremely long. The **nShortURL**[^stackedit] APP helps you to shorten a long URL so it is less of a burden when using SNS or SMS with character limits. This APP is structured in a way so that URLs free of security issues or malicious acts are created, so you can enjoy it without worrying.
+
+----------
+
+#### <i class="icon-file"></i>Safe Short URL Creation
+This APP using NAVER CLOUD PLATFORM's nShortURL service prohibits the shortening of URLs for malicious websites that may cause harm to users based on the latest updated information on malicious attacks, helping you provide **safe URLs** at all times.
+
+#### <i class="icon-hdd"></i>Installation
+1. After downloading the **/dist/linux/installer.bin** file on your systmem. 
+2. run **sh +x installer.bin** to install it in the current directory(Only Support linux version).
+
+
+> **Note:**
+Firstly, You need **[register application](https://apidocs.ncloud.com/en/common/naver_api/naverapi/#register-application)** and then **[get authentication information](https://apidocs.ncloud.com/en/common/naver_api/naverapi/#get-authentication-information)**.
+Finally need to select **[nShortURL service](https://apidocs.ncloud.com/en/common/naver_api/naverapi/#select-product)** on Naver Cloud Platform.
+
+> **Tip:**
+The NAVER CLOUD PLATFORM allows you to use the Short URL Conversion service up to
+25,000 times a day per application. **You can use the service up to 25,000 a day free of charge**, too.
+If you need to increase the service limit, please contact [Naver Cloud Platform Customer Support](https://www.ncloud.com/support/question/service).
+
+
+ [^stackedit]: [nShortURL](https://www.ncloud.com/product/applicationService/nShortUrl) converts the input URL to a shortened URL in the me2.do format.
+
+#### <i class="icon-file"></i>Changelog
+
+nshorturl 1.0
+:   Support nshorturl.conf.
+:   Support do not convert for not exist on the Web page.
+:   Support Easy find short url
