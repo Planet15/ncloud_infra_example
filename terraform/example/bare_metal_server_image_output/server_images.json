@@ -1,0 +1,98 @@
+[
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMLINUX00001",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "CentOS 6.9(64bit)",
+		"platform_type": "LNX64",
+		"product_code": "SPSWBMLINUX00001",
+		"product_description": "CentOS 6.9(64bit)",
+		"product_name": "centos-6.9-64",
+		"product_type": "LINUX"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMLINUX00002",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "CentOS 7.4(64bit)",
+		"platform_type": "LNX64",
+		"product_code": "SPSWBMLINUX00002",
+		"product_description": "CentOS 7.4(64bit)",
+		"product_name": "centos-7.4-64",
+		"product_type": "LINUX"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMLINUX00005",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "CentOS 7.8(64bit)",
+		"platform_type": "LNX64",
+		"product_code": "SPSWBMLINUX00005",
+		"product_description": "CentOS 7.8(64bit)",
+		"product_name": "centos-7.8-64",
+		"product_type": "LINUX"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMLINUX00003",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "Oracle Linux 6.9(64bit)",
+		"platform_type": "LNX64",
+		"product_code": "SPSWBMLINUX00003",
+		"product_description": "Oracle Linux 6.9(64bit)",
+		"product_name": "oracle-linux-6.9-64",
+		"product_type": "LINUX"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMLINUX00004",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "Oracle Linux 7.4(64bit)",
+		"platform_type": "LNX64",
+		"product_code": "SPSWBMLINUX00004",
+		"product_description": "Oracle Linux 7.4(64bit)",
+		"product_name": "oracle-linux-7.4-64",
+		"product_type": "LINUX"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMWINNT00001",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "Windows Server 2016 (64-bit) English Edition",
+		"platform_type": "WND64",
+		"product_code": "SPSWBMWINNT00001",
+		"product_description": "Windows Server 2016 (64-bit) English Edition",
+		"product_name": "win-2016-64-en",
+		"product_type": "WINNT"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMWINNT00002",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "Windows Server 2012(64bit) R2 English Edition",
+		"platform_type": "WND64",
+		"product_code": "SPSWBMWINNT00002",
+		"product_description": "Windows Server 2012(64bit) R2 English Edition",
+		"product_name": "win-2012-64-R2-en",
+		"product_type": "WINNT"
+	},
+	{
+		"base_block_storage_size": "0GB",
+		"id": "SPSWBMWINNT00003",
+		"infra_resource_detail_type_code": "BM",
+		"infra_resource_type": "SW",
+		"os_information": "Windows Server 2016 with MSSQL 2019 Standard English Edition (64-bit)",
+		"platform_type": "WND64",
+		"product_code": "SPSWBMWINNT00003",
+		"product_description": "Windows Server 2016 with MSSQL 2019 Standard English Edition",
+		"product_name": "mssql(2019std)-win-2016-64-en",
+		"product_type": "WINNT"
+	}
+]

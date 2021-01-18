@@ -1,0 +1,72 @@
+[
+	{
+		"base_block_storage_size": "3840GB",
+		"cpu_count": 36,
+		"disk_type": "LOCAL",
+		"generation_code": "G1",
+		"id": "SPSVRBM000000006",
+		"infra_resource_type": "SVR",
+		"memory_size": "384GB",
+		"product_code": "SPSVRBM000000006",
+		"product_description": "Dual Intel Xeon Gold 6154(3.0 GHz), 36 cores, 384GB RAM, 8 x 480GB SSD",
+		"product_name": "Dual Intel Xeon Gold 6154(3.0 GHz), 36 cores, 384GB RAM, 8 x 480GB SSD",
+		"product_type": "BM",
+		"server_image_product_code": ""
+	},
+	{
+		"base_block_storage_size": "7513GB",
+		"cpu_count": 36,
+		"disk_type": "LOCAL",
+		"generation_code": "G1",
+		"id": "SPSVRBM000000007",
+		"infra_resource_type": "SVR",
+		"memory_size": "384GB",
+		"product_code": "SPSVRBM000000007",
+		"product_description": "Dual Intel Xeon Gold 6154(3.0 GHz), 36 cores, 384GB RAM, 2 x 480GB SSD, 2 x 3.2TB NVMe",
+		"product_name": "Dual Intel Xeon Gold 6154(3.0 GHz), 36 cores, 384GB RAM, 2 x 480GB SSD, 2 x 3.2TB NVMe",
+		"product_type": "BM",
+		"server_image_product_code": ""
+	},
+	{
+		"base_block_storage_size": "1920GB",
+		"cpu_count": 20,
+		"disk_type": "LOCAL",
+		"generation_code": "G1",
+		"id": "SPSVRBM000000009",
+		"infra_resource_type": "SVR",
+		"memory_size": "128GB",
+		"product_code": "SPSVRBM000000009",
+		"product_description": "Dual Intel Xeon Silver 4114(2.2 GHz), 20 cores, 128GB RAM, 8 x 480GB SSD",
+		"product_name": "Dual Intel Xeon Silver 4114(2.2 GHz), 20 cores, 128GB RAM, 8 x 480GB SSD",
+		"product_type": "BM",
+		"server_image_product_code": ""
+	},
+	{
+		"base_block_storage_size": "3840GB",
+		"cpu_count": 8,
+		"disk_type": "LOCAL",
+		"generation_code": "G1",
+		"id": "SPSVRBM000000002",
+		"infra_resource_type": "SVR",
+		"memory_size": "64GB",
+		"product_code": "SPSVRBM000000002",
+		"product_description": "Dual Intel Xeon Silver 4112(2.6 GHz) , 8 cores, 64GB RAM, 8 x 480GB SSD",
+		"product_name": "Dual Intel Xeon Silver 4112(2.6 GHz) , 8 cores, 64GB RAM, 8 x 480GB SSD",
+		"product_type": "BM",
+		"server_image_product_code": ""
+	},
+	{
+		"base_block_storage_size": "3840GB",
+		"cpu_count": 4,
+		"disk_type": "LOCAL",
+		"generation_code": "G1",
+		"id": "SPSVRBM000000008",
+		"infra_resource_type": "SVR",
+		"memory_size": "32GB",
+		"product_code": "SPSVRBM000000008",
+		"product_description": "Single Intel Xeon Silver 4112(2.6 GHz), 4 cores, 32GB RAM, 8 x 480GB SSD",
+		"product_name": "Single Intel Xeon Silver 4112(2.6 GHz), 4 cores, 32GB RAM, 8 x 480GB SSD",
+		"product_type": "BM",
+		"server_image_product_code": ""
+	}
+]
