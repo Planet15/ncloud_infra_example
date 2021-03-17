@@ -15,8 +15,7 @@
 
 ## Howto
 * 본 예제는 Naver Cloud Platform 에서 제공 하는 
-*  Kubernetes Service + SourceCommit + SourceBuild + SourceDeploy + SourcePipeline + Container Registry
-*  와 연동 되는 예제 입니다.
+*  Kubernetes Service + SourceCommit + SourceBuild + SourceDeploy + SourcePipeline + Container Registry 와 연동 되는 예제 입니다.
 *  SourceCommit는 private SSH 키를 통해 git push 를 하게 되며,
 *  https://docs.ncloud.com/ko/devtools/devtools-2-1.html 에서 SSH 접속용 자격증명 발급 (KEY-Pair)을 참조 합니다.
 *  Kubernetes Service 와 Container Registry 연동에서는 private Container Registry 이므로 API 키를 통해 인증이 진행됩니다.
