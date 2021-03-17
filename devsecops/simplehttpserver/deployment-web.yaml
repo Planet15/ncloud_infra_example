@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: simpleweb-deployment
+ labels:
+   app: simpleweb
+spec:
+ replicas: 3
+ selector:
+   matchLabels:
+     app: simpleweb
+ template:
+   metadata:
+     labels:
+       app: simpleweb
+   spec:
+     imagePullSecrets:
+     - name: regcred
+     containers:
+     - name: simpleweb
+       image: qnsvq2tq.kr.private-ncr.ntruss.com/testapp:latest
+       imagePullPolicy: Always
+       ports:
+       - containerPort: 8080
