@@ -23,7 +23,7 @@ python-linux-procfs==0.4.9
 pytoml==0.1.14
 pyudev==0.15
 pyxattr==0.5.1
-PyYAML==5.1
+PyYAML==5.4
 registries==0.1
 schedutils==0.4
 seobject==0.1
