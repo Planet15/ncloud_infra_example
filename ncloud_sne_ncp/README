@@ -1,0 +1,11 @@
+SENS APP!
+===================
+
+**Note:**
+This app sends messages using the Simple & Easy Notification Service provided by Naver Cloud Platform.
+Now, I have implemented RESTapi using flask, and servers, ports, and functions must be explicitly set up using config.ini first.
+
+Through the guide below, you need to set it up.
+https://guide.ncloud-docs.com/docs/en/sens-sens-1-2
+
+You can easy to make a container through Dockerfile.
