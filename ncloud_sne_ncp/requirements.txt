@@ -8,7 +8,7 @@ click==7.1.2
 cryptography==3.4.7
 dataclasses==0.8
 Flask==1.1.4
-flask-restx==0.4.0
+flask-restx==0.5.1
 idna==2.10
 importlib-metadata==4.4.0
 itsdangerous==1.1.0
