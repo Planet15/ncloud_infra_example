@@ -5,7 +5,7 @@ certifi==2021.5.30
 cffi==1.14.5
 chardet==4.0.0
 click==7.1.2
-cryptography==3.4.7
+cryptography==39.0.1
 dataclasses==0.8
 Flask==1.1.4
 flask-restx==0.5.1
